@@ -1,0 +1,137 @@
+:root{
+  --bg:#ffffff;
+  --text:#111;
+  --muted:#666;
+  --line:#e7e7e7;
+  --card:#fafafa;
+  --accent:#111;
+  --max: 920px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+}
+
+a{ color: var(--accent); text-decoration: underline; text-underline-offset: .2em; }
+a:hover{ opacity:.75; }
+
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.site-header{
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0 16px;
+}
+
+.site-title{
+  margin:0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.site-title a{ text-decoration:none; }
+.site-sub{
+  margin: 6px 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.nav{
+  display:flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.nav a{ text-decoration:none; border-bottom:1px solid transparent; }
+.nav a:hover{ border-bottom-color: var(--text); }
+
+.hero{
+  padding: 26px 0 10px;
+}
+.hero h2{
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+.muted{ color: var(--muted); }
+.small{ font-size: 12px; }
+
+.notice{
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.section{
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+.section h3{
+  margin: 0 0 14px;
+  font-size: 16px;
+  letter-spacing: .02em;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+@media (max-width: 720px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 14px 14px 12px;
+}
+.card-title{
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+.card-title a{ text-decoration:none; border-bottom:1px solid var(--text); }
+.card-meta{
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.card-desc{
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+.card-tags{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.card-tags span{
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 2px 6px;
+}
+
+.list{
+  margin: 0;
+  padding-left: 18px;
+}
+.box{
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 12px;
+}
+
+.footer{
+  border-top: 1px solid var(--line);
+  padding: 18px 0 30px;
+}
